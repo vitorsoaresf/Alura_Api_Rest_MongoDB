@@ -50,6 +50,20 @@ class LivroController {
       }
     });
   };
+
+  static removerLivros = (req, res) => {
+    const idBook = req.params.id;
+
+    livros.findByIdAndRemove(idBook, (err) => {
+      if (err) {
+        res
+          .status(500)
+          .send({ message: `${err.message} - falha na remoção do livro` });
+      } else {
+        res.status(204).send();
+      }
+    });
+  };
 }
 
 export default LivroController;

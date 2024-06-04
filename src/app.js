@@ -11,34 +11,5 @@ const app = express();
 app.use(express.json());
 
 routes(app);
-// app.get("/livros/:id", (req, res) => {
-//   let index = searchBook(req.params.id);
-//   livros[index].titulo = req.body.titulo;
-//   res.json(livros[index]);
-// });
-
-// app.post("/livros", (req, res) => {
-//   console.log(req.body);
-//   livros.push(req.body);
-//   res.status(201).send("Livro criado com sucesso!");
-// });
-
-// app.put("/livros/:id", (req, res) => {
-//   let index = searchBook(req.params.id);
-//   livros[index].titulo = req.body.titulo;
-//   res.json(livros[index]);
-// });
-
-// app.delete("/livros/:id", (req, res) => {
-//   let index = searchBook(req.params.id);
-//   livros.splice(index, 1);
-//   res.send("Excluido com sucesso!");
-// });
-
-// const searchBook = (id) => {
-//   let findIndex = 0;
-//   findIndex = livros.findIndex((book) => book.id == id);
-//   return findIndex;
-// };
 
 export default app;
